@@ -13,23 +13,28 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 1rem;
 }
 
-/* Login box */
-.login-container {
+/* Login/Signup Box */
+.login-container, .signup-container {
   background: white;
   padding: 2rem 3rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   width: 100%;
   max-width: 400px;
+  box-sizing: border-box;
 }
 
+/* Heading Style */
 h2 {
   text-align: center;
   margin-bottom: 1.5rem;
+  color: #333;
 }
 
+/* Form Group Styling */
 .form-group {
   margin-bottom: 1rem;
 }
@@ -38,15 +43,24 @@ label {
   display: block;
   margin-bottom: 0.3rem;
   font-weight: 500;
+  color: #333;
 }
 
 input {
   width: 100%;
-  padding: 0.6rem;
+  padding: 0.8rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
 }
 
+input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Button Styling */
 button {
   width: 100%;
   padding: 0.7rem;
@@ -57,12 +71,14 @@ button {
   font-weight: bold;
   cursor: pointer;
   margin-top: 1rem;
+  font-size: 1rem;
 }
 
 button:hover {
   background: #0056b3;
 }
 
+/* Signup Link */
 .signup-link {
   text-align: center;
   margin-top: 1rem;
@@ -72,4 +88,15 @@ button:hover {
 .signup-link a {
   color: #007BFF;
   text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .login-container, .signup-container {
+    padding: 1.5rem 2rem;
+  }
 }
